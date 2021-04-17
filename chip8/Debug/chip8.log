@@ -1,0 +1,25 @@
+﻿  chip8.cpp
+C:\Users\Meltout\OneDrive\repos\chip8\chip8\chip8.cpp(123,33): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+C:\Users\Meltout\OneDrive\repos\chip8\chip8\chip8.cpp(162,10): warning C4244: '=': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+C:\Users\Meltout\OneDrive\repos\chip8\chip8\chip8.cpp(270,15): warning C4244: 'argument': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+C:\Users\Meltout\OneDrive\repos\chip8\chip8\chip8.cpp(270,12): warning C4244: 'argument': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+C:\Users\Meltout\OneDrive\repos\chip8\chip8\chip8.cpp(273,15): warning C4244: 'argument': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+C:\Users\Meltout\OneDrive\repos\chip8\chip8\chip8.cpp(273,12): warning C4244: 'argument': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+  graphics.cpp
+  input.cpp
+  main.cpp
+  Generating Code...
+C:\Users\Meltout\OneDrive\repos\chip8\chip8\input.cpp(20): warning C4715: 'Input::getKey': not all control paths return a value
+  glad.c
+graphics.obj : error LNK2019: unresolved external symbol _glfwInit referenced in function "public: __thiscall Graphics::Graphics(void)" (??0Graphics@@QAE@XZ)
+graphics.obj : error LNK2019: unresolved external symbol _glfwWindowHint referenced in function "public: __thiscall Graphics::Graphics(void)" (??0Graphics@@QAE@XZ)
+graphics.obj : error LNK2019: unresolved external symbol _glfwCreateWindow referenced in function "public: __thiscall Graphics::Graphics(void)" (??0Graphics@@QAE@XZ)
+graphics.obj : error LNK2019: unresolved external symbol _glfwPollEvents referenced in function "public: void __thiscall Graphics::refresh(void)" (?refresh@Graphics@@QAEXXZ)
+graphics.obj : error LNK2019: unresolved external symbol _glfwMakeContextCurrent referenced in function "public: __thiscall Graphics::Graphics(void)" (??0Graphics@@QAE@XZ)
+graphics.obj : error LNK2019: unresolved external symbol _glfwSwapBuffers referenced in function "public: void __thiscall Graphics::refresh(void)" (?refresh@Graphics@@QAEXXZ)
+graphics.obj : error LNK2019: unresolved external symbol _glfwGetProcAddress referenced in function "public: __thiscall Graphics::Graphics(void)" (??0Graphics@@QAE@XZ)
+input.obj : error LNK2019: unresolved external symbol _glfwGetKey referenced in function "public: bool __thiscall Input::isPressed(unsigned char)" (?isPressed@Input@@QAE_NE@Z)
+main.obj : error LNK2019: unresolved external symbol _glfwTerminate referenced in function _main
+sound.obj : error LNK2019: unresolved external symbol __imp__PlaySoundA@12 referenced in function "public: bool __thiscall Sound::playSound(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?playSound@Sound@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+C:\Users\Meltout\OneDrive\repos\chip8\lib\glfw3.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\Meltout\OneDrive\repos\chip8\Debug\chip8.exe : fatal error LNK1120: 10 unresolved externals

@@ -1,0 +1,2 @@
+C:\Users\Melt\OneDrive\repos\chip8\x64\Debug\chip8.pdb
+C:\Users\Melt\OneDrive\repos\chip8\chip8\x64\Debug\chip8.pdb

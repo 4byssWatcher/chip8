@@ -1,12 +1,20 @@
 #pragma once
 
+#include "glad\glad.h"
+#include "GLFW\glfw3.h"
+
 struct Input
 {
 private:
-	unsigned char key[16];
+	static const int KEY_SIZE = 16;
+	static constexpr const char* key = "0123456789ABCDEF";
+
+	GLFWwindow* &window;
+
+	Input(GLFWwindow*& window_) :window(window_) {}
 
 public:
-	void init();
 	bool isPressed(unsigned char key);
-	static Input* singleton();
+	unsigned char getKey();
+	static Input& singleton();
 };

@@ -2,26 +2,21 @@
 #include "chip8.h"
 #include "graphics.h"
 #include "input.h"
+#include "sound.h"
 
 int main()
 {
-	Chip8 chip8;
-	Graphics graphics;
-	Input input;
+	Chip8& chip8 = Chip8::singleton();
+	Graphics& graphics = Graphics::singleton();
+	Input& input = Input::singleton();
 
-	graphics.init();
-	input.init();
 	chip8.init();
-	chip8.loadGame("pong");
 
-	while (true)
-	{
-		chip8.emulateCycle();
+	char rom[15] = "roms/pong.rom";
+	chip8.loadGame(rom);
 
-		if (chip8.drawFlag())
-			graphics.draw();
+	std::function<void()> cycle = std::bind(&Chip8::processCycle, &chip8);
+	graphics.startLoop(cycle);
 
-		input.setKeys();
-	}
 	return 0;
 }
